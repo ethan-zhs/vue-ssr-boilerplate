@@ -1,0 +1,17 @@
+{
+  // eslint prettier 设置
+  "eslint.autoFixOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // 让 eslint 认识 vue
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "eslint.options": {
+    "plugins": ["html"]
+  }
+}

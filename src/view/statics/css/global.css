@@ -1,0 +1,75 @@
+html,
+body{
+	height: 100%;
+    font-family: 'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif; 
+    font-weight: normal;
+	-webkit-overflow-scrolling: touch;	
+    -webkit-tap-highlight-color: transparent;    
+    background: #fafafa;
+    color: #282828;
+    font-size: 0.3rem;
+    word-wrap: break-word; 
+	word-break: normal; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img { 
+    border: none; 
+}
+
+ul { 
+    padding: 0;
+    list-style-type: none;
+}
+
+p {
+    margin: 0;
+}
+
+input,
+button,
+textarea { 
+    font-family: 'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif; 
+    -webkit-appearance: none;
+}
+                    
+
+/* * 去除滚动条 * */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-search-cancel-button { 
+    display: none; 
+}
+
+::-webkit-input-placeholder { 
+    color: #ccc;  
+} 
+
+object, param {
+	display: none !important;
+}
+
+
+
+@media (min-width: 750px){
+    body {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px){
+    body {
+        width: 320px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+}

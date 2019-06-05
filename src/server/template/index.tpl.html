@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8"/>
+        <!-- 1、如果支持Google Chrome Frame：GCF，则使用GCF渲染；2、如果系统安装ie8或以上版本，则使用最高版本ie渲染；3、否则，这个设定可以忽略。 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="format-detection" content="telephone=no">
+        <!-- 对视窗缩放等级进行限制，使其适应移动端屏幕大小 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+        <!-- 当把这个网页添加到主屏幕时的标题（仅限IOS） -->
+        <meta name="apple-mobile-web-app-title" content="混合h5">
+        <!-- 添加到主屏幕后全屏显示 -->
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <!--去除safari中number下划线-->
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="theme-color" content="#fafafa" />
+        {{{ meta }}}
+        <title>{{ title }}</title>
+
+        <!-- 使用三花括号(triple-mustache)进行 HTML 不转义插值(non-HTML-escaped interpolation) -->
+        {{{ renderResourceHints() }}}
+        {{{ renderStyles() }}}
+        <script>
+            (function() {
+                initScreen();
+                window.onresize = function () {
+                    initScreen();
+                }
+                function defaultfont() {
+                    var sw = document.documentElement.clientWidth;
+                    var pw = 750;
+                    sw = sw > 750 ? 750 : sw < 320 ? 320 : sw;
+                    var f = 100 * sw / pw;
+                    document.documentElement.style.fontSize = f + 'px';
+                }
+                function initScreen() {
+                    defaultfont();
+                    setTimeout(function () {
+                        defaultfont();
+                    }, 100);
+                }
+            })();
+            
+        </script>
+    </head>
+    <body>
+        <!--vue-ssr-outlet-->
+        {{{ renderState() }}}
+        {{{ renderScripts() }}}
+    </body>
+</html>
