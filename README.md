@@ -64,14 +64,14 @@ npm run build
 ```
 
 ---
-## 2. SEO
+## 3. SEO
 > 
 ```
 - headMixin
 ```
 
 ---
-## 3. Redis
+## 4. Redis
 > 
 ```
 const redisClient = redis.createClient({ host: ip, port: '6380' });
@@ -107,7 +107,7 @@ function getRedisString(key) {
 ```
 
 ---
-## 4. Service Worker
+## 5. Service Worker
 > 
 ```
 // service worker
