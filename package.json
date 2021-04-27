@@ -24,7 +24,7 @@
     "express": "^4.16.4",
     "lru-cache": "^5.1.1",
     "mini-css-extract-plugin": "^0.6.0",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "route-cache": "^0.4.4",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
